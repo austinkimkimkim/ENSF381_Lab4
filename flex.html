@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Austin Kim, Matthew Liu
+Submission  : February 7, 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -17,7 +17,7 @@ Description : Flex Layouts.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<style>	
+	<!-- <style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
 			border: 1px dashed gray;	
@@ -34,26 +34,26 @@ Description : Flex Layouts.
 		.small {
 			border: 1px solid yellow;	
 		}		
-	</style>
+	</style> -->
 
 	<style>
 		/* CSS for menu. You don't need to touch this part */
-		.menu { background-color: #e6e6e6; }
-        .menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
+		.menu { background-color: #e6e6e6;}
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
 		.menu ul li {
 			padding: 5px 0;
 		}
-        .menu ul li a {
-            padding: 10px;
-            text-decoration: none;
-            color: #315eff;
-        }
+    .menu ul li a {
+      padding: 10px;
+      text-decoration: none;
+      color: #315eff;
+    }
 	</style>
 
 	<style>
@@ -65,60 +65,85 @@ Description : Flex Layouts.
 			*/
 			box-sizing: border-box;
 		}
-        body { margin: 0; padding: 0; }
-        img { max-width: 100%; height: auto; }
-        .container { 
-			/*I need some CSS codes.*/
-		 }
-        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
-		.body { 
+    body { margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
+    .container { 
+      display: flex;
+      flex-direction: column;
 			/*I need some CSS codes.*/
 		}
-        .main { 
+    .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
+ 
+		.body { 
+      /*I need some CSS codes.*/
+      display: flex;
+      flex-direction: row;
+		}
+    .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
+      display: flex;
+      flex-direction: column;
 		}
-        
-        .news-item { padding: 10px; }
-        .row { 
+    .news-item { padding: 10px; }
+    .row { 
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
 			/*I need some CSS codes.*/
 		}
         
 
-        @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+    @media screen and (min-width: 769px) {
+      .menu { width: 150px; }  
+      .menu ul{width: 200px;}   
 			.large { 
 				/*I need some CSS codes.*/
+        width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+        width: 70%;
 			}
 			.small { 
 				/*I need some CSS codes.*/
+        width: 30%;
 			 }       
-        }
+    }
 
-        @media screen and (max-width: 768px) {
-			.body { 
+      @media screen and (max-width: 768px) {
+			  .body { 
 				/*I need some CSS codes.*/
-			}
-            .menu ul { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+			  }
+        .menu ul { 
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
 				/*I need some CSS codes.*/
-			 }            
+			  }            
             /*I need some CSS codes.*/
-        }
+        .large{width: 100%;}
+        .medium{width: 60%;}
+        .small{width: 40%}
+      }
 
-        @media screen and (max-width: 480px) {
-            .news-item header h1 { font-size: 18px; }
-            .medium, .small { 
+      @media screen and (max-width: 480px) {
+        .news-item header h1 { font-size: 18px; }
+        .medium, .small { 
+          flex-direction: column;
+          width: 100%;
 				/*I need some CSS codes.*/
-			 }
-        }
+			  }
+      }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">Header</div>
+  <div class="container">
+    <div class="header">Header</div>
 		<div class="body">
 			<div class="menu">
 				<ul>
@@ -170,7 +195,7 @@ Description : Flex Layouts.
 					<!-- Medium news item -->
 					<div class="medium news-item">
 						<header>
-							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+							<h1>Austin Kim and Matthew Liu Takes a Historic Spacewalk Near the ISS</h1>
 						</header>
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
@@ -187,11 +212,11 @@ Description : Flex Layouts.
 				</div>
 			</div>	
 		</div>	
-        <div class="footer">
-            <footer>
-                <p>Fictional News Article for Educational Use at UofC</p>
-            </footer>
-        </div>
+    <div class="footer">
+      <footer>
+        <p>Fictional News Article for Educational Use at UofC</p>
+      </footer>
     </div>
+  </div>
 </body>
 </html>
