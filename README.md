@@ -1,7 +1,7 @@
 # Project Overview
 - Used css to create webpages that responded to webpage size changes
 ## Team Members 
-### |   Name    |
+### |Name       |
 ### |-----------|
 ### |Austin Kim |
 ### |Matthew Liu|
